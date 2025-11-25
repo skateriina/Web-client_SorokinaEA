@@ -1,0 +1,46 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+button.active {
+  background-color: #ff6262;
+  color: #fff;
+}
+
+.cart-icon {
+  position: relative;
+  font-size: 32px;
+  display: inline-block;
+}
+
+#cartCounter {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background: red;
+  color: white;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 14px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 120px;
+  text-align: center;
+}
+
+.sort-btns {
+  margin-bottom: 10px;
+}
