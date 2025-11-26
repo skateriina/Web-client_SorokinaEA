@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Сорокина Е.А. - Лабораторная №4 — Чайная мастерская</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="page-header">
+      <h1>Сорокина Е.А. — Лабораторная работа №4 — Чайная мастерская</h1>
+    </header>
+
+    <main class="container">
+      <!-- Задача 1: Resolve -->
+      <section id="resolve-section" class="card">
+        <h2>Задача 1 — Заваривание чая (resolve)</h2>
+        <button id="btn-job" type="button">Заварить чай</button>
+        <p id="job-output" class="output" aria-live="polite"></p>
+      </section>
+
+      <!-- Задача 2: getData -->
+      <section id="getdata-section" class="card">
+        <h2>Задача 2 — Получение случайных «чайных данных»</h2>
+
+        <div class="controls">
+          <label for="probability">Вероятность успеха (0..1):</label>
+          <input
+            id="probability"
+            type="number"
+            min="0"
+            max="1"
+            step="0.1"
+            value="0.5"
+          />
+        </div>
+
+        <div class="controls">
+          <label for="payload">Строка данных:</label>
+          <input id="payload" type="text" value="листовой чай" />
+        </div>
+
+        <div class="controls">
+          <label for="numArg">Аргумент (число):</label>
+          <input id="numArg" type="number" value="5" />
+        </div>
+
+        <button id="btn-getdata" type="button">Получить данные</button>
+        <p id="getdata-output" class="output" aria-live="polite"></p>
+      </section>
+
+      <!-- Задача 3: Craft system — Чайный крафт -->
+      <section id="craft-section" class="card">
+        <h2>Задача 3 — Приготовление чая (асинхронный крафт)</h2>
+
+        <div class="inventory">
+          <h3>Ингредиенты (инвентарь)</h3>
+          <ul id="inventory-list" aria-live="polite"></ul>
+        </div>
+
+        <div class="craft-controls">
+          <h3>Приготовить</h3>
+          <div class="buttons">
+            <button id="btn-craft-leaf" type="button">
+              Добавить чайный лист
+            </button>
+            <button id="btn-craft-base" type="button">
+              Создать чайную основу
+            </button>
+            <button id="btn-craft-masala" type="button">
+              Сварить масала-чай
+            </button>
+          </div>
+        </div>
+
+        <div class="craft-log">
+          <h3>Лог приготовления</h3>
+          <div id="craft-log-output" class="log" aria-live="polite"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
