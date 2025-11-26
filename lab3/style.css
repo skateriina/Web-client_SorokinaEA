@@ -1,0 +1,102 @@
+/* Простое оформление, можно подставить свои стили из курса */
+
+/* Базовая сетка */
+:root {
+  --bg: #fff;
+  --text: #222;
+  --accent: #0b82f7;
+  --error: #d23a3a;
+  --valid-green: #1b9c5b;
+}
+
+* { box-sizing: border-box; }
+body {
+  font-family: system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background: var(--bg);
+  color: var(--text);
+  margin: 0;
+  padding: 0 16px 60px;
+}
+
+.container { max-width: 900px; margin: 0 auto; padding: 20px 0; }
+
+.site-header {
+  background: #f4f6f8;
+  border-bottom: 1px solid #e6e9ee;
+  padding: 12px 0;
+}
+.header-inner { display:flex; align-items:center; gap:16px; justify-content:space-between; }
+
+.site-title { margin:0; font-size:1rem; }
+
+/* Кнопки */
+.btn {
+  padding:8px 12px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  background:white;
+  cursor:pointer;
+}
+.btn.primary {
+  background: var(--accent);
+  color: white;
+  border-color: transparent;
+}
+.icon-btn {
+  padding:6px 8px;
+  margin-left:8px;
+}
+
+/* dialog */
+dialog {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 8px 30px rgba(20,20,40,0.2);
+  padding: 18px;
+  width: 100%;
+  max-width: 420px;
+}
+
+/* форма */
+.form-row { margin-bottom: 12px; display:flex; flex-direction:column; gap:6px; }
+label { font-weight:600; font-size:0.95rem; }
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  padding: 8px 10px;
+  border-radius:6px;
+  border:1px solid #bbb;
+  font-size:14px;
+}
+
+/* блок для ошибки */
+.error {
+  font-size:13px;
+  min-height:1.2em; /* минимум в одну строку */
+  color: var(--error);
+}
+
+/* :user-valid / :user-invalid — некоторые браузеры поддерживают, добавим запасной :valid/:invalid */
+input:user-valid,
+input:valid {
+  outline: 2px solid rgba(27,156,91,0.12);
+  border-color: var(--valid-green);
+}
+input:user-invalid,
+input:invalid {
+  border-color: var(--error);
+  background: rgba(210,58,58,0.04);
+}
+
+/* пароль в одной строке с кнопкой */
+.password-wrapper { display:flex; align-items:center; gap:6px; }
+
+/* вывод результата */
+.output {
+  border:1px dashed #ddd;
+  padding:10px;
+  min-height:2em;
+  white-space:pre-wrap;
+  margin-top:16px;
+}
